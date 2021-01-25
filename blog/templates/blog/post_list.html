@@ -8,16 +8,20 @@
 <body>
     <div>
         <h1>
-            <a href="">Blog Django Ricardo Yanomane</a>
+            <a href="/">Blog Django Ricardo Yanomane</a>
         </h1>
     </div>
 
+    {% for post in post %}
+
     <div>
-        <p>publicado: 18/01/2021, 18:36</p>
+        <p>published: {{ post.published_date }}</p>
         <h2>
-            <a href="">Meu primeiro post</a>
+            <a href="">{{ post.published_date }}</a>
         </h2>
+        <p>{{ post.text|linebreaksbr}}</p>
     </div>
+    {% endfor %}
 
     <div>
         <p>publicado: 18/01/2021, 18:36</p>
